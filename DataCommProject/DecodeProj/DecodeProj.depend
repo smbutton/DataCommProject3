@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1360265662 source:c:\users\kabaniz\desktop\datacommproj3\datacommproject\decodeproj\src\decode.cpp
+	"..\include\decode.h"
+	<iostream>
+	<iterator>
+	<deque>
+	<math.h>
+
+1360234473 c:\users\kabaniz\desktop\datacommproj3\datacommproject\decodeproj\include\decode.h
+
+1360265662 source:c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\decodeproj\src\decode.cpp
+	"..\include\decode.h"
+	<iostream>
+	<iterator>
+	<deque>
+	<math.h>
+
+1360234473 c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\decodeproj\include\decode.h
+
