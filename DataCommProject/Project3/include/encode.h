@@ -5,8 +5,6 @@
 class encode
 {
     public:
-        encode();
-        virtual ~encode();
     protected:
     private:
 };
