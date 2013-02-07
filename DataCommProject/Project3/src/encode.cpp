@@ -40,19 +40,28 @@ deque<char> getMessage(){
 unsigned short encodeByte(char data){
     short expanded = 0;
     //data = 'a';
-    short orig[7];
-    short hammed[11];
-    cout<<"MyData "<<data<<"which is "<<(short)data<<"\n";
+    short orig[8];
+    short hammed[12];
+    cout<<"MyData "<<data<<"which is "<<(int)data<<"\n";
 
     for(int i =0; i< 8;i++){
           //  cout<<"position "<<i<<" ==\n";
-       unsigned char temp = (data<< (7-i));
+       unsigned char temp = data;
+       if(i == 7){
+
+        temp = (temp >> (i));
+       // cout<<(int)temp<<"\n";
+        orig[0]=temp;
+
+       }else{
+       temp = (temp<< (7-i));
       // cout<<(int)temp<<"\n";
         temp = (temp >> (7-i));
        // cout<<(int)temp<<"\n";
         temp = (temp >> (i));
        // cout<<(int)temp<<"\n";
         orig[7-i]=temp;
+       }
       // cout<<"orig i"<<i<<" "<<orig[i]<<"\n\n";
     }
    // cout<<"\n";
@@ -111,8 +120,8 @@ while(x.size()!=0){
    unsigned char a = x.front() >> 8;
     unsigned char b = (x.front() << 8) >> 8;
 //cout<< x.front()<<"NOW\n";
-//cout<<(int)a<<"  "<<(int)b<<"\n";
-cout<<a<<b;
+cout<<(int)a<<"  "<<(int)b<<"\n";
+//cout<<a<<b;
     x.pop_front();
    // cout<<"NOW "<<x.size()<<"\n";
 }
