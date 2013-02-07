@@ -108,10 +108,13 @@ void printOut(deque<unsigned short> x){
 //cout<<"X IS OF SIZE"<<x.size()<<"\n";
 while(x.size()!=0){
 
-
-    cout<<" "<<x.front()<<" "<<"\n";
+   unsigned char a = x.front() >> 8;
+    unsigned char b = (x.front() << 8) >> 8;
+//cout<< x.front()<<"NOW\n";
+//cout<<(int)a<<"  "<<(int)b<<"\n";
+cout<<a<<b;
     x.pop_front();
-    cout<<"NOW "<<x.size()<<"\n";
+   // cout<<"NOW "<<x.size()<<"\n";
 }
 
 }
