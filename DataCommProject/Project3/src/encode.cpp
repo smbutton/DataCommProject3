@@ -2,20 +2,34 @@
 *@author Shawn Button
 *The hamming code encoding program
 */
-#include "..\include\encode.h"
+//#include "..\include\encode.h"
 #include <iostream>
 #include <iterator>
 #include <deque>
+#include <string>
+#include <iterator>
 using namespace std;
 
 
 deque<char> getMessage(){
 
- deque<char> result;
-    char x;
-    while(cin>>x){
-        result.push_back(x);
-    }
+    deque<char> result;
+    //char x;
+    //while(cin>>x){
+    //    result.push_back(x);
+    //}
+    cin >> noskipws;
+  istream_iterator<char> itr(cin);
+  istream_iterator<char> end;
+  string results(itr, end);
+
+  for(int i = 0; i< results.size(); i++){
+    result.push_back(results.at(i));
+  }
+    /*result.push_back('a');
+    result.push_back('b');
+    result.push_back('c');
+*/
     return result;
 }
 
@@ -84,7 +98,7 @@ void printOut(deque<unsigned short> x){
         unsigned char a = x.front() >> 8;
         unsigned char b = (x.front() << 8) >> 8;
 
-        cout<<a<<b;
+        cout<<(int)a<<" "<<(int)b<<" ";
         x.pop_front();
     }
 }

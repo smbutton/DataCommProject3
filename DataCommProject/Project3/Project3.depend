@@ -1,6 +1,5 @@
 # depslib dependency file v1.0
-1360262924 source:c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\project3\src\encode.cpp
-	"..\include\encode.h"
+1360292074 source:c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\project3\src\encode.cpp
 	<iostream>
 	<iterator>
 	<deque>

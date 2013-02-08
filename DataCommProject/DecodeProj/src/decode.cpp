@@ -7,16 +7,35 @@
 #include <iterator>
 #include <deque>
 #include <math.h>
+#include <string>
+#include <iterator>
+
 using namespace std;
 
 
 //getMessage
 deque<unsigned char> getMessage(){
     deque<unsigned char> result;
-    char x;
-    while(cin>>x){
-        result.push_back(x);
-    }
+
+  cin >> noskipws;
+  istream_iterator<char> itr(cin);
+  istream_iterator<char> end;
+  string results(itr, end);
+
+  for(int i = 0; i< results.size(); i++){
+    result.push_back(results.at(i));
+  }
+   /* result.push_back((char)13);
+    result.push_back((char)209);
+    result.push_back((char)0);
+    result.push_back((char)210);
+    result.push_back((char)5);
+    result.push_back((char)195);
+    */
+    //char x;
+    //while(cin>>x){
+   //    result.push_back(x);
+    //}
     return result;
 }
 

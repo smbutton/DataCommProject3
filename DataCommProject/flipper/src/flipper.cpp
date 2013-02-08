@@ -2,24 +2,40 @@
 *@author Shawn Button
 *Reads bytes of data in and randomly flips bits
 */
-#include "..\include\flipper.h"
+//#include "..\include\flipper.h"
 #include <time.h>
 #include <iostream>
-#include <iterator>
 #include <deque>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <string>
+#include <iterator>
 
 using namespace std;
 
 //getMessage
 deque<unsigned char> getMessage(){
     deque<unsigned char> result;
-    char x;
-    while(cin>>x){
-        result.push_back(x);
-    }
+   /* char x;
+    result.push_back((char)13);
+    result.push_back((char)209);
+    result.push_back((char)0);
+    result.push_back((char)210);
+    result.push_back((char)1);
+    result.push_back((char)195);
+   */
+    cin >> noskipws;
+  istream_iterator<char> itr(cin);
+  istream_iterator<char> end;
+  string results(itr, end);
+
+  for(int i = 0; i< results.size(); i++){
+    result.push_back(results.at(i));
+  }
+   // while(cin>>x){
+   //     result.push_back(x);
+   // }
     return result;
 }
 
@@ -75,7 +91,7 @@ deque<unsigned char> flipMessage(deque<unsigned char> message){
 //PrintOut
 void printOut(deque<unsigned char> x){
     while(x.size()!=0){
-        cout<< x.front();
+        cout<<(int)x.front()<<" ";
         x.pop_front();
     }
 }
