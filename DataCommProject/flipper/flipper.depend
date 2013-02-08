@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1360285071 source:c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\flipper\src\flipper.cpp
+	"..\include\flipper.h"
+	<time.h>
+	<iostream>
+	<iterator>
+	<deque>
+	<stdlib.h>
+	<time.h>
+	<math.h>
+
+1360280600 c:\users\kabaniz\desktop\datacommproj3\hamming\datacommproject\flipper\include\flipper.h
+
