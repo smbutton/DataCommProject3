@@ -1,3 +1,7 @@
+/*
+*@author Shawn Button
+*Reads bytes of data in and randomly flips bits
+*/
 #ifndef FLIPPER_H
 #define FLIPPER_H
 
