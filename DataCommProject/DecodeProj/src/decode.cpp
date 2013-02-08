@@ -2,7 +2,7 @@
 *@author Shawn Button
 *The hamming code decoding program
 */
-#include "..\include\decode.h"
+//#include "..\include\decode.h"
 #include <iostream>
 #include <iterator>
 #include <deque>
